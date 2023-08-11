@@ -14,7 +14,7 @@ export default function Product() {
           <h2 style={{color: '#FFA500'}}>About WordWise</h2>
           <p>
           This adventure tracker app allows you to store data in regards to the places you visited. 
-          Data including cities and dates of your trip. It also comes with a map that clearly shows the geolocations with marker. 
+          Data including cities, dates of your trip and comments. It also comes with a map that clearly shows the geolocations with marker. 
           </p>
           <p>
             It is super easy. All you have to do is type in your destinated cities. Then, the corresponding cities will be shown on the map.

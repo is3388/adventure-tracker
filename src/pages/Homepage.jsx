@@ -8,12 +8,12 @@ export default function Homepage() {
       <Nav />
       <section>
         <h1>
-          Travel around the Globe
+          Wherever You Travel
           <br />
           <span style={{color: '#FFA500', fontSize: '3.5rem'}}>WorldWise keeps track of your adventures</span>
         </h1>
         <h2>
-          An amazing tool that tracks your footsteps into every city around the globe.
+          An amazing tool that tracks your footsteps into every city you explored.
           Let&apos;s share your unforgetable memories and experience with your friends.
         </h2>
         <Link to='/app' className='cta'>Start Tracking Now</Link>

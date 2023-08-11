@@ -1,38 +1,38 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
+      "cityName": "Santorini",
+      "country": "Greece",
+      "emoji": "😍",
       "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
+      "notes": "Unforgettable and fairytale destination!",
       "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
+        "lat": 36.393154,
+        "lng": 25.461510
       },
       "id": 73930385
     },
     {
-      "cityName": "Madrid",
+      "cityName": "Barcelona",
       "country": "Spain",
-      "emoji": "🇪🇸",
+      "emoji": "😘",
       "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "notes": "Full of arts!",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": 41.38879,
+        "lng": 2.15899
       },
       "id": 17806751
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
+      "cityName": "Reykjavík",
+      "country": "Iceland",
+      "emoji": "🤩",
       "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "notes": "Beautiful and eye opening!",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": 64.1470,
+        "lng": -21.9408
       },
       "id": 98443197
     }

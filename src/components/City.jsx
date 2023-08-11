@@ -11,8 +11,8 @@ const formatDate = (date) =>
 function City() {
   // TEMP DATA
   const currentCity = {
-    cityName: "Lisbon",
-    emoji: "🇵🇹",
+    cityName: "Porto",
+    emoji: "😍",
     date: "2027-10-31T15:59:59.138Z",
     notes: "My favorite city so far!",
   };
@@ -29,13 +29,13 @@ function City() {
       </div>
 
       <div className={styles.row}>
-        <h6>You went to {cityName} on</h6>
+        <h6>You visited {cityName} on</h6>
         <p>{formatDate(date || null)}</p>
       </div>
 
       {notes && (
         <div className={styles.row}>
-          <h6>Your notes</h6>
+          <h6>Your review</h6>
           <p>{notes}</p>
         </div>
       )}
