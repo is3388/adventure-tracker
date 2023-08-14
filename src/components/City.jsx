@@ -1,4 +1,5 @@
 import styles from "./City.module.css";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -11,11 +12,19 @@ const formatDate = (date) =>
 function City() {
   // TEMP DATA
   const currentCity = {
-    cityName: "Porto",
+    cityName: "Santorini",
     emoji: "😍",
     date: "2027-10-31T15:59:59.138Z",
-    notes: "My favorite city so far!",
+    notes: "Unforgettable and fairytale destination!"
   };
+
+  const {id} = useParams()
+  // with the URL construct, user can share the URL with friends or able to bookmark it
+  const [searchParams, setSearchParams] = useSearchParams() // query string and update query string
+  const lat = searchParams.get('lat')
+  const lng = searchParams.get('lng')
+
+  console.log(id)
 
   const { cityName, emoji, date, notes } = currentCity;
 
@@ -26,6 +35,10 @@ function City() {
         <h3>
           <span>{emoji}</span> {cityName}
         </h3>
+      </div>
+
+      <div className={styles.row}>
+        <p>Position: {lat}, {lng} </p>
       </div>
 
       <div className={styles.row}>
@@ -52,7 +65,6 @@ function City() {
       </div>
 
       <div>
-        <ButtonBack />
       </div>
     </div>
   );

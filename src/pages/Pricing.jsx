@@ -11,12 +11,11 @@ export default function Pricing() {
           <h2>
             Introductory Offer
             <br />
-            $5/month
+            $5/month or $60/year
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+            The real time traker service provides location history with city name, country, timestamp plus a map with the exact position.
+            It&apos;s only $5 per month and $60 per year.
           </p>
         </div>
         <img src="img-2.jpg" alt="a van heading to Grand Canyon" />
