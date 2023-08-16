@@ -1,5 +1,9 @@
+import { useCities } from "../hooks/useCities";
 import styles from "./City.module.css";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import Spinner from "./Spinner";
+import BackButton from "./BackButton";
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
@@ -10,35 +14,38 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  // TEMP DATA
+ 
+  const {id} = useParams()
+  
+  // remove the code as using global state for City view and back to the CityList
+  // with the URL construct, user can share the URL with friends or able to bookmark it
+  //const [searchParams, setSearchParams] = useSearchParams() // query string and update query string
+  //const lat = searchParams.get('lat')
+  //const lng = searchParams.get('lng')
+  const {getCity, currentCity, isLoading} = useCities()
+
+   /* TEMP DATA
   const currentCity = {
     cityName: "Santorini",
     emoji: "😍",
     date: "2027-10-31T15:59:59.138Z",
     notes: "Unforgettable and fairytale destination!"
-  };
+  }; */
 
-  const {id} = useParams()
-  // with the URL construct, user can share the URL with friends or able to bookmark it
-  const [searchParams, setSearchParams] = useSearchParams() // query string and update query string
-  const lat = searchParams.get('lat')
-  const lng = searchParams.get('lng')
+  useEffect(() => {
+    getCity(id)
+  }, [id])
+  const { cityName, date, notes } = currentCity;
 
-  console.log(id)
-
-  const { cityName, emoji, date, notes } = currentCity;
+  if (isLoading) return <Spinner />
 
   return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          {cityName}
         </h3>
-      </div>
-
-      <div className={styles.row}>
-        <p>Position: {lat}, {lng} </p>
       </div>
 
       <div className={styles.row}>
@@ -65,6 +72,7 @@ function City() {
       </div>
 
       <div>
+      <BackButton />
       </div>
     </div>
   );
