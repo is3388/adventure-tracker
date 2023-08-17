@@ -13,6 +13,20 @@ const formatDate = (date) =>
     weekday: "long",
   }).format(new Date(date));
 
+const flagemojiToPNG = (flag) => {
+    // Convert flag emoji to corresponding country code
+    const countryCode = [...flag]
+      .map((char) =>
+        String.fromCharCode(char.codePointAt() - 127397).toLowerCase()
+      )
+      .join("");
+  
+    // Return an image element with the country's flag
+    return (
+      <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
+    );
+  };
+
 function City() {
  
   const {id} = useParams()
@@ -35,7 +49,7 @@ function City() {
   useEffect(() => {
     getCity(id)
   }, [id])
-  const { cityName, date, notes } = currentCity;
+  const { cityName, date, notes, emoji } = currentCity;
 
   if (isLoading) return <Spinner />
 
@@ -44,7 +58,8 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          {cityName}
+          
+          {cityName} <span>{emoji ? flagemojiToPNG(emoji) : ""}</span>
         </h3>
       </div>
 
