@@ -71,6 +71,18 @@
         "lng": "32.78320312500001"
       },
       "id": 98443204
+    },
+    {
+      "cityName": "Helsinki",
+      "country": "Finland",
+      "emoji": "🇫🇮",
+      "date": "2023-08-03T23:53:56.000Z",
+      "notes": "Peace and quiet city 🙃",
+      "position": {
+        "lat": "59.95501026206206",
+        "lng": "25.0927734375"
+      },
+      "id": 98443205
     }
   ]
 }

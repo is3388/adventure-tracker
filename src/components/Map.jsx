@@ -90,9 +90,8 @@ export default function Map() {
 function ChangeCenter({ position }) {
   //if (!position[0] || !position[1]) return null;
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const map = useMap(); // react-leaflet's hook to get the current instance of the map that's currently displayed
-  map.closePopup();
+  //map.closePopup();
   map.setView(position);
   return null; // since this is component needs to return some jsx
 }
