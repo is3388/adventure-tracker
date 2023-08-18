@@ -61,18 +61,6 @@
       "id": 98443203
     },
     {
-      "cityName": "Ankara",
-      "country": "Turkiye",
-      "emoji": "🇹🇷",
-      "date": "2023-07-01T22:37:56.000Z",
-      "notes": "Relaxing and low budget place to visit 😊",
-      "position": {
-        "lat": "39.63953756436671",
-        "lng": "32.78320312500001"
-      },
-      "id": 98443204
-    },
-    {
       "cityName": "Helsinki",
       "country": "Finland",
       "emoji": "🇫🇮",
@@ -83,6 +71,18 @@
         "lng": "25.0927734375"
       },
       "id": 98443205
+    },
+    {
+      "cityName": "Kruisem",
+      "country": "Belgium",
+      "emoji": "🇧🇪",
+      "date": "2023-07-06T16:54:15.000Z",
+      "notes": "Beautiful sculptures and old town hall 🥰 ",
+      "position": {
+        "lat": "50.91688748924508",
+        "lng": "3.5815429687500004"
+      },
+      "id": 98443206
     }
   ]
 }
