@@ -24,3 +24,10 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+}

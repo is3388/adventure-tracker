@@ -16,7 +16,7 @@ export default function Homepage() {
           An amazing tool that tracks your footsteps into every city you explored.
           Let&apos;s share your unforgetable memories and experience with your friends.
         </h2>
-        <Link to='/app' className='cta'>Start Tracking Now</Link>
+        <Link to='/login' className='cta'>Start Tracking Now</Link>
       </section>
     </main>
   );

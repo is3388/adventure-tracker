@@ -1,16 +1,36 @@
 import styles from "./Login.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Nav from "../components/Nav";
+import Button from "../components/Button";
+import { useAuth } from "../hooks/useAuth";
 
 export default function Login() {
-  // PRE-FILL FOR DEV PURPOSES
+  
   const [email, setEmail] = useState("robert@example.com");
   const [password, setPassword] = useState("qwerty");
+  const navigate = useNavigate()
+  const {login, isAuthenticated, error, clearLoginError} = useAuth()
 
-  return (
+  useEffect(() => {
+    clearLoginError()
+    if (isAuthenticated) {
+      navigate('/app', {replace: true}) // remove login page in the history stack for Back buttun
+    }
+  }, [isAuthenticated, navigate])
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (email && password)
+      login(email, password)
+    
+  }
+
+    return (
     <main className={styles.login}>
       <Nav />
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
@@ -32,9 +52,10 @@ export default function Login() {
         </div>
 
         <div>
-          <button>Login</button>
+          <Button type='primary'>Login</Button>
         </div>
       </form>
+      {error && <span className={styles.error}>{error}</span>}
     </main>
   );
 }
