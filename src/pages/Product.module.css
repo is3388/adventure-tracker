@@ -21,8 +21,14 @@
 .product h2 {
   font-size: 4rem;
   line-height: 1.2;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
+
+.product h3 {
+  font-size: 2.85rem;
+  line-height: 0.5;
+  margin-bottom: 1.5rem;
+  }
 
 .product p {
   font-size: 1.6rem;

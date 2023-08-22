@@ -8,11 +8,12 @@ export default function Pricing() {
       <Nav />
       <section>
         <div>
-          <h2>
+          <h2 style={{color: '#FFA500'}}>
             Introductory Offer
-            <br />
+          </h2>            
+          <h3 style={{color: '#FFA500'}}>
             $5/month or $60/year
-          </h2>
+          </h3>
           <p>
             The real time traker service provides location history with city name, country, timestamp plus a map with the exact position.
             It&apos;s only $5 per month and $60 per year.

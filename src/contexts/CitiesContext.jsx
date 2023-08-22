@@ -1,4 +1,4 @@
-import { createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer, useCallback } from 'react';
 
 // use context api and useReducer
 const CitiesContext = createContext();
@@ -76,8 +76,8 @@ function CitiesProvider({ children }) {
     }
     fetchCities();
   }, []);
-
-  async function getCity(id) { // id from component UI / URL is a string
+  // useCallback to turn this function into memoized function to prevent rerendering for City component
+  const getCity = useCallback(async function getCity(id) { // id from component UI / URL is a string
     if (Number(id) === currentCity.id) return;
     dispatch({ type: 'loading' });
     try {
@@ -87,7 +87,7 @@ function CitiesProvider({ children }) {
     } catch {
       dispatch({ type: 'rejected', payload: 'Error fetching the city...' });
     }
-  }
+  },[currentCity.id])
 
   async function createCity(newCity) {
     dispatch({ type: 'loading' });

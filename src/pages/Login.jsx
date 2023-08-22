@@ -18,7 +18,7 @@ export default function Login() {
     if (isAuthenticated) {
       navigate('/app', {replace: true}) // remove login page in the history stack for Back buttun
     }
-  }, [isAuthenticated, navigate])
+  }, [isAuthenticated, navigate, clearLoginError])
 
   function handleSubmit(e) {
     e.preventDefault()

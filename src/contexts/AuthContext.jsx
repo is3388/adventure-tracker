@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react';
+import { createContext, useReducer, useCallback } from 'react';
 
 const AuthContext = createContext();
 
@@ -66,9 +66,10 @@ function AuthProvider({ children }) {
     dispatch({ type: 'logout' });
   }
 
-  function clearLoginError() {
+  // using useCallback hook to turn this function into memoized function to prevent rerender the login component
+  const clearLoginError = useCallback(function clearLoginError() {
     dispatch({ type: 'clearLoginError' });
-  }
+  }, [])
 
   return (
     <AuthContext.Provider
