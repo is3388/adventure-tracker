@@ -1,9 +1,10 @@
 import styles from "./Homepage.module.css";
 import Nav from '../components/Nav'
 import { Link } from 'react-router-dom'
+import Footer from "../components/Footer";
 
 export default function Homepage() {
-  return (
+  return ( 
     <main className={styles.homepage}>
       <Nav />
       <section>
@@ -18,6 +19,7 @@ export default function Homepage() {
         </h2>
         <Link to='/login' className='cta'>Start Tracking Now</Link>
       </section>
-    </main>
+      <Footer />
+    </main>  
   );
 }
